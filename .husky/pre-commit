@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '[lint-staged] Starting'
+echo '>>>>>>>>>>>>>>>>>>>>>>'
+
+# commit 之前钩子执行lint&test，通过后才允许提交
+npx lint-staged
+# yarn lint-staged

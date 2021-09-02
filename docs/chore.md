@@ -34,3 +34,20 @@ $ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin esl
 # [Vite + React + Typescript 最佳实践](https://github.com/lichenbuliren/fe-project-base)
 # [对应仓库]https://segmentfault.com/a/1190000039875183)
 ```
+
+#### husky
+
+> https://commitlint.js.org/#/guides-local-setup
+
+```bash
+$ yarn add husky -D
+# [.git 文件不在当前项目的根目录下,需对prepare做出调整](https://typicode.github.io/husky/#/?id=custom-directory)
+$ yarn husky install -> #npm set-script prepare "husky install"; 再执行生成.husky文件夹
+$ yarn add @commitlint/cli @commitlint/config-conventional commitizen lint-staged -D
+$ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+$ npx commitlint --from HEAD~1 --to HEAD --verbose #test
+$ npx husky add .husky/pre-commit 'npx lint-staged'
+
+# .lintstagedrc.js
+# [React 项目中引入 Husky 6.x 和 Lint-staged](https://www.jianshu.com/p/a7cea983e7a2)
+```

@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 先执行 `.husky/_/husky.sh` 这个脚本: 前置条件、用户写的脚本命令是否存在、失败提示等检测处理
+# 再执行pre指令
+
+echo '[commitlint] Starting'
+echo '>>>>>>>>>>>>>>>>>>>>>>'
+
+# 此脚本检测msg是否符合所设定的规范
+npx --no-install commitlint --edit $1
+
+# currently @commitlint/cli doesn't support yarn v2
+# yarn commitlint --edit $1
