@@ -3,9 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "tsc:init": "tsc --init",
+    "readme:v1": "echo 'Vite starts the react service'",
     "dev": "vite --host",
     "preview": "vite preview --host",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "readme:v2": "echo 'test lint...'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --ignore-pattern \"bad.*\" --max-warnings 0",
+    "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --ignore-pattern \"bad.*\" --fix",
+    "prettier": "prettier -l \"./src/*\"",
+    "prettier:fix": "prettier --write -l \"./src/*\""
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -14,8 +21,23 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
     "@vitejs/plugin-react-refresh": "^1.3.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-alloy": "^4.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.2",
     "vite": "^2.5.2"
-  }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "public",
+    "*.d.ts"
+  ],
+  "prettierIgnore": []
 }
