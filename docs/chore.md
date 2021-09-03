@@ -35,7 +35,7 @@ $ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin esl
 # [对应仓库]https://segmentfault.com/a/1190000039875183)
 ```
 
-#### husky
+### 1.3 husky
 
 > https://commitlint.js.org/#/guides-local-setup
 
@@ -50,4 +50,12 @@ $ npx husky add .husky/pre-commit 'npx lint-staged'
 
 # .lintstagedrc.js
 # [React 项目中引入 Husky 6.x 和 Lint-staged](https://www.jianshu.com/p/a7cea983e7a2)
+```
+
+### 1.4 svg 雪碧图
+
+```bash
+$ yarn add vite-plugin-svg-icons -D
+# Usage: https://github.com/anncwb/vite-plugin-svg-icons
+# 博客参考(addRoute、env、css预处理、alias、svg抽离plugins写法): https://blog.csdn.net/weixin_43368335/article/details/113868053
 ```

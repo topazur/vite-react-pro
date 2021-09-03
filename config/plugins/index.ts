@@ -2,6 +2,7 @@ import { PluginOption } from 'vite'
 
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import legacyPlugin from '@vitejs/plugin-legacy'
+import svgBuilder from './svg-builder'
 
 /**
  * Array of vite plugins to use.
@@ -20,6 +21,8 @@ const plugins: (PluginOption | PluginOption[])[] = [
       'Edge >= 15',
     ],
   }),
+  // svg雪碧图
+  svgBuilder(),
 ]
 
 export default plugins

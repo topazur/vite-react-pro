@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "tsc:init": "tsc --init",
+    "svgo": "svgo -f src/icons",
     "readme:v1": "echo 'Vite starts the react service'",
     "dev": "vite --host",
     "preview": "vite preview --host",
@@ -38,8 +39,10 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
+    "svgo": "^2.5.0",
     "typescript": "^4.3.2",
-    "vite": "^2.5.2"
+    "vite": "^2.5.2",
+    "vite-plugin-svg-icons": "^1.0.4"
   },
   "browserslist": {
     "production": [
