@@ -1,6 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from '@/App'
+
+// 自定义全局样式
+import '@/assets/styles/app.less'
+// global 用于加载一些 antd-mobile 的全局性逻辑和样式
+import 'antd-mobile/es/global'
 
 /**
  * 两种方式注册雪碧图: 使用官方文档推荐的
