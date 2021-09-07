@@ -1,5 +1,5 @@
 // import path from 'path'
-import { UserConfigExport } from 'vite'
+import { UserConfigExport, ConfigEnv } from 'vite'
 
 import plugins from './plugins'
 import variables from './options/variables'
@@ -8,13 +8,13 @@ import server from './options/server'
 import css from './options/css'
 import build from './options/build'
 
-const getConfig = (): UserConfigExport => ({
+const getConfig = ({ mode, command }: ConfigEnv): UserConfigExport => ({
   ...variables,
   resolve,
   server,
   css,
   build,
-  plugins,
+  plugins: plugins({ mode, command }),
 })
 
 export default getConfig

@@ -55,7 +55,17 @@ $ npx husky add .husky/pre-commit 'npx lint-staged'
 ### 1.4 svg 雪碧图
 
 ```bash
-$ yarn add vite-plugin-svg-icons -D
 # Usage: https://github.com/anncwb/vite-plugin-svg-icons
+$ yarn add vite-plugin-svg-icons -D
+
 # 博客参考(addRoute、env、css预处理、alias、svg抽离plugins写法): https://blog.csdn.net/weixin_43368335/article/details/113868053
+```
+
+### 1.5 mock 插件
+
+```bash
+# Usage: https://github.com/anncwb/vite-plugin-mock
+$ yarn add mockjs vite-plugin-mock -D
+
+# [curl](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
 ```
