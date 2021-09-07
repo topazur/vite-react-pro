@@ -69,3 +69,11 @@ $ yarn add mockjs vite-plugin-mock -D
 
 # [curl](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
 ```
+
+### px2rem
+
+```bash
+# Usage: https://juejin.cn/post/6901943749916491783
+$ yarn add autoprefixer postcss-plugin-px2rem -D
+$ yarn add amfe-flexible
+```

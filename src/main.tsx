@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '@/App'
 
+// 使用 lib-flexible 动态设置 REM 基准值（html 标签的字体大小）
+import 'amfe-flexible'
 // 自定义全局样式
 import '@/assets/styles/app.less'
 // global 用于加载一些 antd-mobile 的全局性逻辑和样式
