@@ -77,3 +77,7 @@ $ yarn add mockjs vite-plugin-mock -D
 $ yarn add autoprefixer postcss-plugin-px2rem -D
 $ yarn add amfe-flexible
 ```
+
+### pdf 预览
+
+> https://zhuanlan.zhihu.com/p/129007002

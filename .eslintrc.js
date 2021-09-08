@@ -14,6 +14,7 @@ module.exports = {
     //
     JSX: true,
     React: true,
+    pdfjsWorker: true,
   },
   settings: {
     // Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration.

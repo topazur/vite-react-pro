@@ -14,3 +14,5 @@ export { default as Profile } from '@/pages/tabs/Profile'
  * @classify profile 个人中心相关
  */
 export { default as Pwd } from '@/pages/profiles/Pwd'
+
+export { default as PDF } from '@/pages/PDF'

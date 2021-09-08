@@ -13,6 +13,7 @@ import {
   Profile,
   // profiles
   Pwd,
+  PDF,
 } from '@/pages'
 
 /**
@@ -55,6 +56,17 @@ const routes: RouteConfig[] = [
           {
             path: '/profile/pwd',
             component: Pwd,
+          },
+        ],
+      },
+      {
+        path: '/pdf',
+        render: (props: RouteConfigComponentProps) => <Main {...props} />,
+        routes: [
+          {
+            path: '/pdf',
+            exact: true,
+            component: PDF,
           },
         ],
       },
