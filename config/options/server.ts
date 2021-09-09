@@ -6,7 +6,7 @@ import { ServerOptions } from 'vite'
 const server: ServerOptions = {
   host: '0.0.0.0',
   port: 4000,
-  open: true,
+  open: false,
   https: false,
   proxy: {
     '/api': {

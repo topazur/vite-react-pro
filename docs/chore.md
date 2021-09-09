@@ -81,3 +81,24 @@ $ yarn add amfe-flexible
 ### pdf 预览
 
 > https://zhuanlan.zhihu.com/p/129007002
+
+### patch-package
+
+> 通过 `patch-package` 记录 `node_modules` 更改记录，生成 `patches `目录，然后通过项目的 `post-install` 脚本在团队中同步这个更改。
+
+- [react-virtualized 中导入未定义变量 bpfrpt_proptype_WindowScroller](https://juejin.cn/post/7005731645911203877)
+- [patch-package 博客 1](https://blog.csdn.net/ghosind/article/details/83692873)
+- [patch-package 博客 2](https://blog.csdn.net/qq_23334071/article/details/114736831)
+
+```bash
+# 1. 安装
+$ yarn add patch-package postinstall-postinstall
+
+# 2. 修改 node_modules 代码后执行（先修改再执行此命令，才能比较出修改的内容生成patch文件）：
+$ yarn patch-package react-virtualized
+
+# 3. package.json 中 scripts 增加：
+{
+  "postinstall": "patch-package"
+}
+```

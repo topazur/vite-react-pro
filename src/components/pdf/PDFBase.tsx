@@ -1,14 +1,13 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react'
 import * as pdfJS from 'pdfjs-dist'
 import { TextLayerBuilder } from 'pdfjs-dist/web/pdf_viewer'
+// window.pdfjsWorker
 import 'pdfjs-dist/build/pdf.worker.entry'
 
 import 'pdfjs-dist/web/pdf_viewer.css'
 import './pdf.less'
 
 pdfJS.GlobalWorkerOptions.workerSrc = window!.pdfjsWorker
-// console.log(TextLayerBuilder)
-const src = 'http://127.0.0.1:4000/2021.pdf'
 const devicePixelRatio = window.devicePixelRatio
 
 interface IProps {
@@ -37,8 +36,8 @@ export default function ({ url, textLayer = false }: IProps) {
   /**
    * @title 渲染pdf的canvas层级
    */
-  const renderPdf = async (document: any, num: number) => {
-    const page = await document.getPage(num)
+  const renderPdf = async (pdfDocument: any, num: number) => {
+    const page = await pdfDocument.getPage(num)
 
     const viewport = page.getViewport({ scale: scale * devicePixelRatio })
     // Prepare canvas using PDF page dimensions
@@ -104,12 +103,12 @@ export default function ({ url, textLayer = false }: IProps) {
 
   useEffect(() => {
     const fetchPdf = async () => {
-      const loadingTask = pdfJS.getDocument(src)
+      const loadingTask = pdfJS.getDocument(url)
 
-      const document = await loadingTask.promise
-      setPdfInstance(document)
-      setNumPages(document.numPages)
-      renderPdf(document, currentPage)
+      const pdfDocument = await loadingTask.promise
+      setPdfInstance(pdfDocument)
+      setNumPages(pdfDocument.numPages)
+      renderPdf(pdfDocument, currentPage)
     }
 
     fetchPdf()

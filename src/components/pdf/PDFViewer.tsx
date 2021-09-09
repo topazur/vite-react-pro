@@ -6,6 +6,7 @@ import {
   PDFViewer,
   // DownloadManager,
 } from 'pdfjs-dist/web/pdf_viewer'
+// window.pdfjsWorker
 import 'pdfjs-dist/build/pdf.worker.entry'
 
 import 'pdfjs-dist/web/pdf_viewer.css'
@@ -44,7 +45,10 @@ export default function ({ url, textLayer = false }: IProps) {
     const findController = new PDFFindController({
       linkService,
       // 发布订阅
-      eventBus: { _on: () => {}, dispatch: () => {} },
+      eventBus: {
+        _on: () => {},
+        dispatch: () => {},
+      },
     })
     const newViewer = new PDFViewer({
       // 必须含绝对定位样式 - `getComputedStyle(this.container).position !== "absolute"`
@@ -55,7 +59,14 @@ export default function ({ url, textLayer = false }: IProps) {
       linkService,
       findController,
       // 发布订阅
-      eventBus: { _on: () => {}, dispatch: () => {} },
+      eventBus: {
+        _on: () => {},
+        dispatch: (event: string, payload: any) => {
+          if (event === 'pagechanging') {
+            console.log(payload.pageNumber)
+          }
+        },
+      },
     })
 
     linkService.setViewer(newViewer)
@@ -63,13 +74,13 @@ export default function ({ url, textLayer = false }: IProps) {
     newViewer.currentScaleValue = scale
 
     const loadingTask = pdfJS.getDocument({ url: url })
-    const document = await loadingTask.promise
+    const pdfDocument = await loadingTask.promise
 
     // 下面两个setDocument方法是渲染的最后关键之处
-    if (!document) return
-    newViewer.setDocument(document)
-    linkService.setDocument(document)
-    setNumPages(document.numPages)
+    if (!pdfDocument) return
+    newViewer.setDocument(pdfDocument)
+    linkService.setDocument(pdfDocument)
+    setNumPages(pdfDocument.numPages)
     setViewer(newViewer)
   }
 

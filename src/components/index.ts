@@ -7,3 +7,4 @@ export { default as HowList } from '@/components/HowList'
 /* pdf */
 export { default as PDFBase } from '@/components/pdf/PDFBase'
 export { default as PDFViewer } from '@/components/pdf/PDFViewer'
+export { default as PDFVirtualized } from '@/components/pdf/PDFVirtualized'

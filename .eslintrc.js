@@ -102,5 +102,11 @@ module.exports = {
     'spaced-comment': ['error', 'always'],
     // 禁止注释中出现 TODO 和 FIXME
     'no-warning-comments': 1,
+
+    /* *************************************** */
+    // react
+    /* *************************************** */
+    // 始终自闭和标签
+    'react/self-closing-comp': 0,
   },
 }
