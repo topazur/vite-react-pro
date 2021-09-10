@@ -102,3 +102,9 @@ $ yarn patch-package react-virtualized
   "postinstall": "patch-package"
 }
 ```
+
+### NPlayer
+
+> https://nplayer.js.org/docs/installation/
+
+> https://muiplayer.js.org/zh/demo/

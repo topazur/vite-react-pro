@@ -14,6 +14,7 @@ import {
   // profiles
   Pwd,
   PDF,
+  NPlayer,
 } from '@/pages'
 
 /**
@@ -67,6 +68,17 @@ const routes: RouteConfig[] = [
             path: '/pdf',
             exact: true,
             component: PDF,
+          },
+        ],
+      },
+      {
+        path: '/n-player',
+        render: (props: RouteConfigComponentProps) => <Main {...props} />,
+        routes: [
+          {
+            path: '/n-player',
+            exact: true,
+            component: NPlayer,
           },
         ],
       },

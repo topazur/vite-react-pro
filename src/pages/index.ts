@@ -16,3 +16,5 @@ export { default as Profile } from '@/pages/tabs/Profile'
 export { default as Pwd } from '@/pages/profiles/Pwd'
 
 export { default as PDF } from '@/pages/PDF'
+
+export { default as NPlayer } from '@/pages/NPlayer'
