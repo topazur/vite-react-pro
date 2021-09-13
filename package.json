@@ -22,6 +22,7 @@
     "@nplayer/react": "^1.0.9",
     "amfe-flexible": "^2.2.1",
     "antd-mobile": "^5.0.0-beta.2",
+    "gsap": "^3.7.1",
     "nplayer": "^1.0.9",
     "pdfjs-dist": "^2.9.359",
     "react": "^17.0.0",
@@ -89,7 +90,8 @@
     "dist",
     "public",
     "postcss.config.js",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/**/*.js"
   ],
   "prettierIgnore": []
 }

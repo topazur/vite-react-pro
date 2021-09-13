@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '@/App'
+import { gsap } from 'gsap'
 
 // 使用 lib-flexible 动态设置 REM 基准值（html 标签的字体大小）
 import 'amfe-flexible'
@@ -15,6 +16,11 @@ import 'antd-mobile/es/global'
  */
 import 'virtual:svg-icons-register'
 // import 'vite-plugin-svg-icons/register';
+
+// @ts-ignore eslint-disable-next-line
+gsap.registerPlugin(window.MorphSVGPlugin)
+// @ts-ignore eslint-disable-next-line
+// gsap.config({ trialWarn: false })
 
 ReactDOM.render(
   <React.StrictMode>

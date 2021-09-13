@@ -15,6 +15,8 @@ import {
   Pwd,
   PDF,
   NPlayer,
+  GSAP,
+  TwitterSidebar,
 } from '@/pages'
 
 /**
@@ -79,6 +81,22 @@ const routes: RouteConfig[] = [
             path: '/n-player',
             exact: true,
             component: NPlayer,
+          },
+        ],
+      },
+      {
+        path: '/gsap',
+        render: (props: RouteConfigComponentProps) => <Main {...props} />,
+        routes: [
+          {
+            path: '/gsap',
+            exact: true,
+            component: GSAP,
+          },
+          {
+            path: '/gsap/twitter',
+            exact: true,
+            component: TwitterSidebar,
           },
         ],
       },

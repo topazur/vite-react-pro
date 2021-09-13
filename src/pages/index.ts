@@ -18,3 +18,6 @@ export { default as Pwd } from '@/pages/profiles/Pwd'
 export { default as PDF } from '@/pages/PDF'
 
 export { default as NPlayer } from '@/pages/NPlayer'
+
+export { default as GSAP } from '@/pages/gsap'
+export { default as TwitterSidebar } from '@/pages/gsap/TwitterSidebar'
