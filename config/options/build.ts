@@ -59,6 +59,8 @@ const build: BuildOptions = {
    * @url https://github.com/terser/terser
    */
   minify: 'terser',
+  // ⏬ 可用于debug，此情况下不压缩精确错误到行
+  // minify: false,
 
   /**
    * @title 传递给Terser的更多minify选项

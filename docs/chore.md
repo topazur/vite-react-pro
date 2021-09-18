@@ -26,6 +26,12 @@ $ yarn add react@alpha react-dom@alpha
 
 - [vite config 详细注释](https://github.com/Asarua/vite2-config-description.git)
 
+- [ glob 模式的模块导入替代 require.context || vite-plugin-html 给模板插入变量](https://juejin.cn/post/6934316962952544269)
+
+- [配置 jest：默认通过 process 读取环境变量,但改为 import.meta.env](https://segmentfault.com/a/1190000039690206)
+
+- [yorkie || webpackChunkName+output.entryFileNames || 可视化 Bundle](https://segmentfault.com/a/1190000039801848)
+
 ### 1.2 eslint for [alloy](https://www.npmjs.com/package/eslint-config-alloy)
 
 ```bash
