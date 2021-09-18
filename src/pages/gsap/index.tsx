@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { SvgIcon } from '@/components'
 
-import cr from '@/assets/svg/cr.svg'
-console.log('cr: ', cr)
+// import cr from '@/assets/svg/cr.svg'
+// console.log('cr: ', cr)
 import './index.less'
 
 export default function () {

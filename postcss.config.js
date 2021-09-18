@@ -1,5 +1,7 @@
 module.exports = {
   plugins: [
+    // postcss-combine-media-query # 当有媒体查询时，引入防止下面插件合并导致失效，而是自己处理媒体查询的合并
+    // postcss-combine-duplicated-selectors # 合并相同选择器及重复属性
     /* NOTICE: 需配置browserslist才生效；则会根据设置浏览器版本生成兼容性前缀 */
     require('autoprefixer'),
     require('postcss-plugin-px2rem')({

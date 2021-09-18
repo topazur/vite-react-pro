@@ -31,7 +31,7 @@ const css: CSSOptions = {
    * @description 其路径搜索是通过`postcss-load-config`实现的
    * @notice 如果提供来该内联配置，vite将不会搜索其他PostCss配置源
    */
-  // postcss: '',
+  // postcss: '', # 配置项在 `postcss.config.js` ，此处配置会造成覆盖
 }
 
 export default css

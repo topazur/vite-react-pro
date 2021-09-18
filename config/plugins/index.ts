@@ -2,6 +2,7 @@ import { PluginOption, ConfigEnv } from 'vite'
 
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import legacyPlugin from '@vitejs/plugin-legacy'
+import compression from 'vite-plugin-compression'
 import svgBuilder from './svg-builder'
 import mockServer from './mock-server'
 
@@ -22,6 +23,11 @@ const plugins = ({ mode, command }: ConfigEnv): (PluginOption | PluginOption[])[
       'Edge >= 15',
     ],
   }),
+  /**
+   * Use gzip or brotli to compress resources.
+   * 因为 `vite-plugin-compress` 不支持 gzip，compression插件是在此基础上修改的
+   */
+  compression({ algorithm: 'brotliCompress' }),
   // svg雪碧图
   svgBuilder(),
   // mock插件: 真实在浏览器里存在 请求记录

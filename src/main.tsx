@@ -7,8 +7,9 @@ import { gsap } from 'gsap'
 import 'amfe-flexible'
 // 自定义全局样式
 import '@/assets/styles/app.less'
-// global 用于加载一些 antd-mobile 的全局性逻辑和样式
-import 'antd-mobile/es/global'
+// 在手动按需加载时，global 用于加载一些 antd-mobile 的全局性逻辑和样式
+// https://next.mobile.ant.design/guide/import-on-demand
+// import 'antd-mobile/es/global'
 
 /**
  * 两种方式注册雪碧图: 使用官方文档推荐的
