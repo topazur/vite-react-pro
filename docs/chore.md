@@ -22,6 +22,10 @@ $ ✅ yarn create vite [project] --template react-ts
 $ yarn add react@alpha react-dom@alpha
 ```
 
+#### vite.config.js 配置参考
+
+- [vite config 详细注释](https://github.com/Asarua/vite2-config-description.git)
+
 ### 1.2 eslint for [alloy](https://www.npmjs.com/package/eslint-config-alloy)
 
 ```bash
@@ -70,7 +74,7 @@ $ yarn add mockjs vite-plugin-mock -D
 # [curl](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
 ```
 
-### px2rem
+### 1.6 px2rem
 
 ```bash
 # Usage: https://juejin.cn/post/6901943749916491783
@@ -78,11 +82,11 @@ $ yarn add autoprefixer postcss-plugin-px2rem -D
 $ yarn add amfe-flexible
 ```
 
-### pdf 预览
+### 1.7 pdf 预览
 
 > https://zhuanlan.zhihu.com/p/129007002
 
-### patch-package
+### 1.8 patch-package
 
 > 通过 `patch-package` 记录 `node_modules` 更改记录，生成 `patches `目录，然后通过项目的 `post-install` 脚本在团队中同步这个更改。
 
@@ -103,7 +107,7 @@ $ yarn patch-package react-virtualized
 }
 ```
 
-### NPlayer
+### 1.9 NPlayer
 
 > https://nplayer.js.org/docs/installation/
 

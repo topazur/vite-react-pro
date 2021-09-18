@@ -29,3 +29,29 @@ const plugins = ({ mode, command }: ConfigEnv): (PluginOption | PluginOption[])[
 ]
 
 export default plugins
+
+/* RollupPlugin 接口
+interface Plugin extends RollupPlugin {
+  enforce?: 'pre' | 'post'
+  apply?: 'serve' | 'build'
+  config?: (config: UserConfig, env: ConfigEnv) => UserConfig | null | void
+  configResolved?: (config: ResolvedConfig) => void
+  configureServer?: ServerHook
+  transformIndexHtml?: IndexHtmlTransform
+  handleHotUpdate?(ctx: HmrContext): Array<ModuleNode> | void | Promise<Array<ModuleNode> | void>
+  resolveId?(
+    this: PluginContext,
+    source: string,
+    importer: string | undefined,
+    options: { custom?: CustomPluginOptions },
+    ssr?: boolean,
+  ): Promise<ResolveIdResult> | ResolveIdResult
+  load?(this: PluginContext, id: string, ssr?: boolean): Promise<LoadResult> | LoadResult
+  transform?(
+    this: TransformPluginContext,
+    code: string,
+    id: string,
+    ssr?: boolean,
+  ): Promise<TransformResult> | TransformResult
+}
+*/
